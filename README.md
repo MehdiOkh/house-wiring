@@ -3,3 +3,5 @@ This project take a house schema and cleans it's furniture and unnecessary thing
 
 # project images
 ![1](https://github.com/MehdiOkh/house-wiring/blob/main/house-wiring-system/app-pictures/1.jpg?raw=true)
+![1](https://github.com/MehdiOkh/house-wiring/blob/main/house-wiring-system/app-pictures/2.jpg?raw=true)
+
