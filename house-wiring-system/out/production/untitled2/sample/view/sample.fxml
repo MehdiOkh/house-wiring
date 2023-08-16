@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #e1e1e1;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Controller">
+   <children>
+      <HBox fx:id="topPane" alignment="CENTER_RIGHT" layoutY="-3.0" prefHeight="48.0" prefWidth="600.0" style="-fx-background-color: #527698;" />
+      <HBox alignment="TOP_CENTER" layoutX="18.0" layoutY="64.0" prefHeight="322.0" prefWidth="562.0">
+         <children>
+            <ImageView fx:id="imgView" fitHeight="322.0" fitWidth="562.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </HBox>
+      <Label fx:id="picLabel" layoutX="253.0" layoutY="189.0" prefHeight="29.0" prefWidth="96.0" text="Nothing to show" textAlignment="CENTER" />
+      <JFXButton fx:id="openImgButton" layoutX="251.0" layoutY="218.0" prefHeight="37.0" prefWidth="96.0" ripplerFill="WHITE" style="-fx-background-color: #2F5756;" text="Open Image" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXHamburger fx:id="hamburger" layoutX="6.0" layoutY="4.0" prefHeight="37.0" prefWidth="40.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXHamburger>
+      <JFXDrawer fx:id="drawer" alignment="TOP_LEFT" defaultDrawerSize="194.0" layoutY="45.0" prefHeight="355.0" prefWidth="182.0">
+         <children>
+            <AnchorPane fx:id="drawerPane" prefHeight="362.0" prefWidth="182.0" style="-fx-background-color: #A7BDCE;" visible="false">
+               <children>
+                  <JFXButton fx:id="cleanUpBtn" disable="true" layoutX="28.0" layoutY="299.0" prefHeight="37.0" prefWidth="122.0" style="-fx-background-color: #2980b9;" text="CleanUp Plan" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXSlider fx:id="keythSlider" blockIncrement="0.05" layoutX="24.0" layoutY="91.0" majorTickUnit="0.05" max="1.0" prefHeight="14.0" prefWidth="122.0" showTickLabels="true" snapToTicks="true" visible="false">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXSlider>
+                  <Label fx:id="thLabel" layoutX="25.0" layoutY="67.0" text="Threshold:" textFill="#575757" visible="false">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="thValue" layoutX="99.0" layoutY="68.0" prefHeight="17.0" prefWidth="40.0" text="0.0" textFill="#575757" visible="false">
+                     <font>
+                        <Font name="Segoe UI Black" size="13.0" />
+                     </font></Label>
+                  <JFXComboBox fx:id="mtdCombo" focusColor="WHITE" labelFloat="true" layoutX="25.0" layoutY="21.0" prefHeight="25.0" prefWidth="122.0" promptText="Methods" unFocusColor="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXComboBox>
+                  <JFXSlider fx:id="mLineSlider" blockIncrement="1.0" layoutX="24.0" layoutY="153.0" majorTickUnit="0.5" max="200.0" minorTickCount="1" prefHeight="14.0" prefWidth="122.0" showTickLabels="true" snapToTicks="true" visible="false" />
+                  <Label fx:id="mLineLabel" layoutX="25.0" layoutY="128.0" text="MinLine:" textFill="#575757" visible="false">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mLineValue" layoutX="86.0" layoutY="130.0" prefHeight="17.0" prefWidth="40.0" text="0.0" textFill="#575757" visible="false">
+                     <font>
+                        <Font name="Segoe UI Black" size="13.0" />
+                     </font></Label>
+                  <JFXSlider fx:id="gapSlider" blockIncrement="1.0" layoutX="24.0" layoutY="214.0" majorTickUnit="0.5" max="200.0" minorTickCount="1" prefHeight="14.0" prefWidth="122.0" showTickLabels="true" snapToTicks="true" visible="false" />
+                  <Label fx:id="gapLabel" layoutX="25.0" layoutY="189.0" text="Gap:" textFill="#575757" visible="false">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="gapValue" layoutX="60.0" layoutY="191.0" prefHeight="17.0" prefWidth="40.0" text="0.0" textFill="#575757" visible="false">
+                     <font>
+                        <Font name="Segoe UI Black" size="13.0" />
+                     </font></Label>
+                  <JFXSlider fx:id="wirethSlider" blockIncrement="1.0" layoutX="24.0" layoutY="91.0" majorTickUnit="0.5" minorTickCount="1" prefHeight="14.0" prefWidth="122.0" showTickLabels="true" snapToTicks="true" visible="false" />
+                  <JFXCheckBox fx:id="nodesCheck" checkedColor="#2980b9" layoutX="28.0" layoutY="248.0" prefHeight="18.0" prefWidth="143.0" text="Show All Nodes" visible="false" />
+                  <JFXCheckBox fx:id="resultCheck" checkedColor="#2980b9" layoutX="28.0" layoutY="272.0" prefHeight="18.0" prefWidth="152.0" selected="true" text="Show Efficient Path" visible="false" />
+               </children>
+            </AnchorPane>
+         </children>
+      </JFXDrawer>
+      <ImageView fx:id="closeImg" fitHeight="17.0" fitWidth="14.0" layoutX="577.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchor" prefHeight="448.0" prefWidth="627.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.CustomGraphController">
+   <children>
+      <AnchorPane fx:id="edgeSizePane" opacity="0.75" prefHeight="448.0" prefWidth="627.0" style="-fx-background-color: white;" visible="false">
+         <children>
+            <AnchorPane layoutX="214.0" layoutY="153.0" prefHeight="142.0" prefWidth="200.0" style="-fx-background-color: #9FCDE8; -fx-background-radius: 15;">
+               <children>
+                  <JFXTextField fx:id="edgeSizeField" alignment="CENTER" focusColor="WHITE" labelFloat="true" layoutX="22.0" layoutY="27.0" promptText="Enter your edge size" unFocusColor="#1e1e1e">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton fx:id="edgeSizeBtn" layoutX="33.0" layoutY="80.0" prefHeight="30.0" prefWidth="135.0" style="-fx-background-color: #369d53;" text="Submit" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <VBox alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="236.0" prefWidth="148.0" style="-fx-border-color: #9FCDE8; -fx-border-radius: 10; -fx-border-width: 2;">
+         <children>
+            <VBox prefHeight="88.0" prefWidth="128.0">
+               <children>
+                  <JFXRadioButton fx:id="div" text="Add Division">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="edge" text="Add Edge">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="source" text="Add Source">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="key" text="Add Key">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="randomRadio" text="Random graph" />
+               </children>
+            </VBox>
+            <JFXButton alignment="CENTER" onAction="#findPath" prefHeight="30.0" prefWidth="122.0" ripplerFill="#369d53" style="-fx-background-color: #369d53;" text="Find Shortest Path" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="7.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton alignment="CENTER" layoutX="23.0" layoutY="178.0" onAction="#retry" prefHeight="30.0" prefWidth="122.0" ripplerFill="#a8d4ee" style="-fx-background-color: #54b1e7;" text="Retry" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="7.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

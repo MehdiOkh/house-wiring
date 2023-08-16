@@ -1,0 +1,28 @@
+.jfx-hamburger StackPane {
+    -fx-background-color: #e0e0e0;
+}
+
+.jfx-slider > .track {
+    -fx-background-color: #dedede;
+}
+
+/* Styling the slider thumb */
+.jfx-slider > .thumb {
+    -fx-background-color: #2980b9;
+}
+
+/* Styling the filled track #2980b9 */
+.jfx-slider > .colored-track {
+    -fx-background-color: #2980b9;
+}
+
+/* Styling the animated thumb */
+.jfx-slider > .animated-thumb {
+    -fx-background-color: #2980b9;
+}
+
+/* Styling the slider value text inside animated thumb */
+.jfx-slider .slider-value {
+    -fx-fill: white;
+    -fx-stroke: white;
+}
